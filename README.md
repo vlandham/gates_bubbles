@@ -39,6 +39,12 @@ http://0.0.0.0:3000/
 
 And you should see your bubbles!
 
+## Remove the Google Analytics Code!
+
+Because this same code is used to run the live version on my site, I (perhaps foolishly) added my own Google Analytics code to the index.html page.
+
+If you build anything with this - and that thing gets put on the internet, just try to remember to change the GA code down at the bottom of the page. At least you could remove the GA call.
+
 ## Things to consider
 
 Here are a few things that may be issues for you, or may not be
