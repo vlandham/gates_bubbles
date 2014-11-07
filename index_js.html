@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Gates Foundation Spending - Vallandingham.me</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- end CSS-->
+
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container" class="container">
+    <header>
+    <h1>Gates Foundation Educational Spending</h1>
+    </header>
+    <div id="main" role="main">
+      <div id="view_selection" class="btn-group">
+        <a href="#" id="all" class="btn active">All Grants</a>
+        <a href="#" id="year" class="btn">Grants By Year</a>
+      </div>
+      <div id="vis"></div>
+    </div>
+    <footer>
+    <p>A demonstration of animated bubble charts in D3.js</p>
+    <p><a href="http://vallandingham.me/bubble_charts_in_d3.html">Blog Post</a> | <a href="https://github.com/vlandham/gates_bubbles">Code</a> | <a href="http://www.washingtonpost.com/wp-srv/metro/data/gates-grants.html">Data</a></p>
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <script src="js/CustomTooltip.js"></script>
+  <script src="js/libs/d3.js"></script>
+  <script src="js/vis.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(document).ready(function() {
+          $('#view_selection a').click(function() {
+            var view_type = $(this).attr('id');
+            $('#view_selection a').removeClass('active');
+            $(this).toggleClass('active');
+            toggle_view(view_type);
+            return false;
+          });
+        });
+    });
+  </script>
+
+
+  <script>
+    window._gaq = [['_setAccount','UA-17355070-1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

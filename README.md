@@ -39,6 +39,18 @@ http://0.0.0.0:3000/
 
 And you should see your bubbles!
 
+## Pure JS version
+
+For folks not wanting to dive into Coffeescript, I've added a JS version that is just the compiled Coffeescript. You can see it by navigating to the page:
+
+http://0.0.0.0:3000/index_js.html
+
+This was compiled with Coffeescript 1.8, using the command:
+
+     coffee -o js/ -c coffee/vis.coffee
+
+If you would like to try it on your own modified version of the Bubbles.
+
 ## Remove the Google Analytics Code!
 
 Because this same code is used to run the live version on my site, I (perhaps foolishly) added my own Google Analytics code to the index.html page.
