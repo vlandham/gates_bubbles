@@ -66,12 +66,6 @@
   </script>
 
 
-  <script>
-    window._gaq = [['_setAccount','UA-17355070-1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>
 
 
   <!--[if lt IE 7 ]>
@@ -79,5 +73,15 @@
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
   
+  <!-- Cloudflare Web Analytics (same site token as vallandingham.me); production only -->
+  <script>
+    if (location.hostname === 'vallandingham.me' || location.hostname === 'www.vallandingham.me') {
+      var beacon = document.createElement('script');
+      beacon.defer = true;
+      beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      beacon.dataset.cfBeacon = JSON.stringify({ token: '2b4df352ecf04cab9fc322e072c3ef88' });
+      document.body.appendChild(beacon);
+    }
+  </script>
 </body>
 </html>
